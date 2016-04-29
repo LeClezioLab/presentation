@@ -1,10 +1,61 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		</head>
-	<body>	
-	<h1>アルゴリズムゼミの資料</h1>
-		<a href="./algo-semi/0426.html">0426</a>
-	</body>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src = "main.js"></script>
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin:0;
+	_overflow:hidden;
+	padding:0;
+}
+
+li {
+	color: blue;
+	margin-left: 20px
+}
+
+
+#left_frame {
+	background-color: #ccc;
+	height:100%;
+	left:0;
+	margin:0;
+	padding:0;
+	position:fixed;
+	_position:absolute;
+	top:0;
+	width:160px;
+}
+
+#right_frame {
+	height:100%;
+	margin:0 0 0 170px;
+	_overflow:auto;
+	padding:0;
+}
+</style>
+</head>
+
+<body>
+<div id="left_frame">	
+	<h3>ゼミ資料</h3>
+	<p>2回目<p>
+	<li onClick="loadText('https://raw.githubusercontent.com/NNAKAYAMA/workspace/master/seminar/0426_main.html')">資料</li>
+	<li onClick="loadText('https://raw.githubusercontent.com/NNAKAYAMA/workspace/master/seminar/0426_add.html')">	追加1</li>
+	<li onClick="loadText('https://raw.githubusercontent.com/NNAKAYAMA/workspace/master/seminar/0426_add_part2.html')">	追加2</li>
+
+	<br>
+	<h3>プレゼンテーション</h3>
+	<a href="./algo-semi/0426.html" target="_blank"><li>2回目</li></a>
+</div>
+<div id="right_frame">
+	<div id ="disp"></div>
+</div>
+</body>
 </html>
