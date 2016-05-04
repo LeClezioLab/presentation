@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>0426semi</title></head><body><article class="markdown-body"><h2>
+<a id="user-content-本日の予定" class="anchor" href="#%E6%9C%AC%E6%97%A5%E3%81%AE%E4%BA%88%E5%AE%9A" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>本日の予定</h2>
+
+<ol>
+<li>editorのインストール</li>
+<li>前回の復習</li>
+<li>Github
+
+<ul>
+<li>初めてのfetch , merge</li>
+<li>Gitignoreについて</li>
+</ul>
+</li>
+<li>C言語<br>
+
+<ul>
+<li>Includeとは<br>
+</li>
+<li>Printfを使って出力しよう</li>
+<li>変数・型とは何か？</li>
+<li>キーボード入力を読み取ろう</li>
+<li>配列を使ってみよう</li>
+</ul>
+</li>
+<li>slackについて</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="user-content-editorのインストール" class="anchor" href="#editor%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Editorのインストール</h2>
+
+<p>メモ帳やwordでプログラミングするのはダサいのでやめよう </p>
+
+<p><a href="https://www.sublimetext.com/">Sublimetext</a>   </p>
+
+<p><a href="https://atom.io/">Atom</a>  </p>
+
+<p>とか...<br>
+とりあえずいくつか触ってみて好みのを見つけてね</p>
+
+<hr>
+
+<h2>
+<a id="user-content-前回の復習" class="anchor" href="#%E5%89%8D%E5%9B%9E%E3%81%AE%E5%BE%A9%E7%BF%92" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>前回の復習</h2>
+
+<ul>
+<li><p>前回はCがコンパイルできる環境を作った<br>
+<code>gcc  filename.c –o outputName</code><br>
+その後 <code>./outputName</code> で実行できたね</p></li>
+<li><p>Githubではリポジトリを<code>fork</code>(複製)して、自分のローカルリポジトリに<code>clone</code>(コピー)した  </p></li>
+<li>変更が加えられたファイルを<code>commit</code>(記録)したね<br>
+</li>
+<li>ommitにはsummary(題名),description(内容)を入力できたね<br>
+</li>
+<li>必ずsummaryだけは入力しよう</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-gitのコマンド" class="anchor" href="#git%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gitのコマンド</h2>
+
+<ul>
+<li>fetch(download)</li>
+<li>merge(update)</li>
+<li>pull(fetch + merge)</li>
+<li>push(upload)</li>
+</ul>
+
+<p>それぞれのコマンドはリポジトリに対して、このような働きをする  </p>
+
+<h4>
+<a id="user-content-基本的に以下の流れで作業する" class="anchor" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AB%E4%BB%A5%E4%B8%8B%E3%81%AE%E6%B5%81%E3%82%8C%E3%81%A7%E4%BD%9C%E6%A5%AD%E3%81%99%E3%82%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>基本的に以下の流れで作業する</h4>
+
+<ol>
+<li>作業する前にネットワーク上のリポジトリの変更点をDL(fetch)して更新(merge)する<br>
+</li>
+<li>作業した変更点を記録(commit)する<br>
+</li>
+<li>変更点をネットワーク上のリポジトリにupload(push)する</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="user-content-gitignoreについて" class="anchor" href="#gitignore%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gitignoreについて</h2>
+
+<ul>
+<li>historyには前回のcommit履歴が残っているだろう</li>
+<li> exeファイルをcommitしたが、本来exeをcommitすることはまず無い</li>
+<li>しかし、現在の設定では変更履歴に出てしまう</li>
+<li>そこで例外設定について書かれている.gitignoreを変更し、exeを例外にしよう</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-gitignoreの編集" class="anchor" href="#gitignore%E3%81%AE%E7%B7%A8%E9%9B%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gitignoreの編集</h2>
+
+<ul>
+<li>早速インストールしたエディタでseminarでディレクトリを開いてみよう<br>
+</li>
+<li>その中の.gitignoreを編集<br>
+</li>
+<li>.exeについて書かれているところを探そう　　</li>
+<li>今回はこの説明のために<code>#(コメントアウト)</code>しているので<code>#</code>を消せば無事exeは除外されるようになる</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-hellocの中身" class="anchor" href="#helloc%E3%81%AE%E4%B8%AD%E8%BA%AB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hello.cの中身</h2>
+
+<pre><code>##include &lt;stdio.h&gt;
+int main(){
+    printf("HelloWorld\n");
+}
+</code></pre>
+
+<hr>
+
+<p>#include 
+このコードはstandard input output library . header を
+含むといった意味<br>
+これを入れないとprintfが動かない</p>
+
+<h4>
+<a id="user-content-int-main" class="anchor" href="#int-main" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>int main(){</h4>
+
+<p>C言語は最初にmain関数を読み込むように決められている
+intはint型という型の一種でC言語において関数は</p>
+
+<p><code>型名 関数名(){}</code></p>
+
+<hr>
+
+<pre><code>printf("mainText");  
+printf("%d\n",varName);
+
+</code></pre>
+
+<p><strong>%</strong> は変数を扱うときに使用する<br>
+<strong>\</strong> は改行やタブなどのｵﾌﾟｼｮﾝを使用できる<br>
+今回は <strong>\n</strong> で改行の意味  </p>
+
+<h5>
+<a id="user-content-はものによってで表示されることもあるが意味は同じ" class="anchor" href="#%E3%81%AF%E3%82%82%E3%81%AE%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E3%81%93%E3%81%A8%E3%82%82%E3%81%82%E3%82%8B%E3%81%8C%E6%84%8F%E5%91%B3%E3%81%AF%E5%90%8C%E3%81%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><strong>\</strong>　はものによって￥で表示されることもあるが意味は同じ</h5>
+
+<hr>
+
+<h2>
+<a id="user-content-ｵﾌﾟｼｮﾝについて" class="anchor" href="#%EF%BD%B5%EF%BE%8C%EF%BE%9F%EF%BD%BC%EF%BD%AE%EF%BE%9D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>％ｵﾌﾟｼｮﾝについて</h2>
+
+<table>
+<thead>
+<tr>
+<th>変換指定文字</th>
+<th>意味</th>
+<th>使われるデータ型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%c</td>
+<td>1文字として入力する</td>
+<td>文字型</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>10進数で入力する</td>
+<td>整数型</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>浮動小数点数を入力する</td>
+<td>浮動小数点型</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>文字列を入力する</td>
+<td>文字型配列</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>
+<a id="user-content--ｵﾌﾟｼｮﾝについて" class="anchor" href="#-%EF%BD%B5%EF%BE%8C%EF%BE%9F%EF%BD%BC%EF%BD%AE%EF%BE%9D%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>\ ｵﾌﾟｼｮﾝについて</h2>
+
+<table>
+<thead>
+<tr>
+<th>エスケープシーケンス</th>
+<th>意味</th>
+<th>ASCIIコード（16進）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>復帰改行</td>
+<td>0A</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>警報音    07</td>
+<td></td>
+</tr>
+<tr>
+<td>\t</td>
+<td>タブコード  09</td>
+<td></td>
+</tr>
+<tr>
+<td>\b</td>
+<td>バックスペース</td>
+<td>08</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>文字としての \</td>
+<td>5C</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>文字としての '</td>
+<td>2C</td>
+</tr>
+<tr>
+<td>\"</td>
+<td>文字としての "</td>
+<td>22</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>文字列終了コード</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>
+<a id="user-content-helloc" class="anchor" href="#helloc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>hello.c</h2>
+
+<p>色々いうよりかは動かしたほうが覚えると思うのでいくつか試してもらいたいと思います<br>
+1. 出力　Hello World をHello Lelab に変更<br>
+2. 出力を<br>
+    Hello World (改行)<br>
+    Hello Lelab に変更<br>
+3. <em>#include </em> を削除して実行  </p>
+
+<hr>
+
+<h2>
+<a id="user-content-stdiohって何" class="anchor" href="#stdioh%E3%81%A3%E3%81%A6%E4%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>stdio.hって何?</h2>
+
+<p><em>#include </em> を消したら動かなくなった...</p>
+
+<ul>
+<li>先ほども言った通りこれがなければprintfは動かない<br>
+</li>
+<li>同ディレクトリ上にあるstdio.hの中を見てみよう<br>
+</li>
+<li>これはコンパイラの中に入っているのをコピーしたもの<br>
+</li>
+<li>215行目にprintfについての記載がある<br>
+</li>
+<li>headerFileはライブラリではなく、ライブラリの場所を示している<br>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-includeしなくてもいい" class="anchor" href="#include%E3%81%97%E3%81%AA%E3%81%8F%E3%81%A6%E3%82%82%E3%81%84%E3%81%84" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>includeしなくてもいい!?</h2>
+
+<ul>
+<li>helloIncStdio.cはhello.cの先頭にstdio.hの中身を追加したもの<br>
+</li>
+<li>当然コンパイルできる<br>
+</li>
+<li>毎回これを入れるのは大変なので、やっぱりincludeしよう<br>
+</li>
+<li>基本的にはstdio.hやstdlib.h辺りが良く使うやつ</li>
+<li>関数がどこに含まれているかは適時検索しよう</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-変数の型について" class="anchor" href="#%E5%A4%89%E6%95%B0%E3%81%AE%E5%9E%8B%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>変数の型について</h2>
+
+<table>
+<thead>
+<tr>
+<th>型指定</th>
+<th>データ型</th>
+<th>バイト幅</th>
+<th>扱える数値の範囲</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>文字型</td>
+<td>1</td>
+<td>-128～127</td>
+</tr>
+<tr>
+<td>int</td>
+<td>整数型</td>
+<td>2</td>
+<td>-32768～32767</td>
+</tr>
+<tr>
+<td>long</td>
+<td>倍長整数型</td>
+<td>4</td>
+<td>-2147483648～2147483647</td>
+</tr>
+<tr>
+<td>float</td>
+<td>単精度浮動小数点型</td>
+<td>4</td>
+<td>3.4E-38～3.4E+38</td>
+</tr>
+<tr>
+<td>double</td>
+<td>倍精度浮動小数点型</td>
+<td>8</td>
+<td>1.7E-308～1.7E+308</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>基本的に使用するのは char,int,floatの3種類</li>
+<li>char型は文字型でa-zなど文字を扱うことができる。</li>
+<li>日本語は1byteではないのでchar型に入れてもエラーが出る</li>
+<li>int型は整数型、整数を扱うときに使う</li>
+<li>少数を入れると丸められるので気をつけよう</li>
+<li>float型は少数型、精確性に欠けるのであまり使わないほうが良い</li>
+</ul>
+
+<hr>
+
+<ul>
+<li>practice/0419/printf.cを開いてみよう<br>
+</li>
+<li>それぞれint,float,charについて例が用意されている<br>
+</li>
+<li>とりあえず実行してみよう<br>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-配列にてついて" class="anchor" href="#%E9%85%8D%E5%88%97%E3%81%AB%E3%81%A6%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>配列にてついて</h2>
+
+<ul>
+<li>char型は1byteまでなので、一文字しか入れることができない</li>
+<li>文字列を入れたいときは配列を使用しよう</li>
+<li>配列の基本形<br>
+
+<ul>
+<li>
+<em>type　varName[]</em><br>
+</li>
+</ul>
+</li>
+<li>型はintやcharなど　変数名の後の[]には配列の個数を入れる(省略可)<br>
+</li>
+<li>個数に関しては多めに宣言しておくと楽<br>
+</li>
+<li>配列の一文字目は[0]から始まることに注意  　</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-scanfについて" class="anchor" href="#scanf%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>scanfについて</h2>
+
+<ul>
+<li>printfとは反対の入力、つまりキーボードの入力を読み取る関数　　</li>
+<li>言うより試してみよう</li>
+<li>
+<em>scan_char.c</em> をコンパイル、実行</li>
+<li>入力された文字を返答してくれるコードになっている</li>
+<li>
+<em>scan_num.c</em>をコンパイル、実行</li>
+<li>入力を2つ読み取る、2つ目の入力に移るときはenterを押す</li>
+</ul>
+
+<hr>
+
+<ul>
+<li>キーの入力ができるなら色々できそうな気はするが、実際の所あやふやでエラーばっかり吐く<br>
+</li>
+<li>多用するとデバッグが辛いのが現状<br>
+</li>
+<li>例えばscan_numに文字列を入れると…</li>
+</ul>
+
+<hr>
+
+<ul>
+<li>詳しいことは後ほど説明するが、char型の文字列を読み取るときは<br>
+</li>
+<li>
+<code>scanf(“%s”,varName);</code><br>
+</li>
+<li>int型の数字列などを読み取るときは<br>
+</li>
+<li>
+<code>scanf(“%d”,&amp;varName);</code><br>
+</li>
+<li>といったように&amp;が必要になる</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-比較関係演算子について" class="anchor" href="#%E6%AF%94%E8%BC%83%E9%96%A2%E4%BF%82%E6%BC%94%E7%AE%97%E5%AD%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>比較・関係演算子について</h2>
+
+<table>
+<thead>
+<tr>
+<th>演算子</th>
+<th>意味</th>
+<th>使用例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt;</td>
+<td>より大きい</td>
+<td>if (a &gt; b)</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>以上</td>
+<td>if (a &gt;= b)</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>より小さい</td>
+<td>if (a &lt; b)</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>より小さいか、等しい</td>
+<td>if (a &lt;= b)</td>
+</tr>
+<tr>
+<td>==</td>
+<td>等しい</td>
+<td>if (a == b)</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>等しくない</td>
+<td>if (a != b)</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>論理積（かつ）</td>
+<td>if (a &gt; 0 &amp;&amp; b &gt; 0)</td>
+</tr>
+<tr>
+<td>||</td>
+<td>論理和（または）</td>
+<td>if (a &gt; 0 || b &gt; 0)</td>
+</tr>
+<tr>
+<td>!</td>
+<td>否定（でない）</td>
+<td>if (!a)</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<ul>
+<li>
+<code>if(□){□□}else{□□□}</code><br>
+
+<ul>
+<li>□が真ならば□□を偽ならば□□□を実行する</li>
+</ul>
+</li>
+<li>
+<code>for(□;□□;□□□;){=}</code>
+
+<ul>
+<li>初期条件□について条件□□が真なら□□□を実行し、=を実行する,□□が偽になるまで繰り返し実行する</li>
+</ul>
+</li>
+<li>
+<code>while(□){□□}</code><br>
+</li>
+<li>□が真ならば□□を実行する,□が真になるまで繰り返し実行する</li>
+<li>
+<code>do{□}while{□□}</code>
+
+<ul>
+<li>□を実行した後、条件□□が真であれば再実行する</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<pre><code>●switch □  
+        case:□□
+        break;
+        case□□□
+        break;
+</code></pre>
+
+<pre><code>    ■変数□について、値が□であれば下記の内容を実行し、□□であれば…
+</code></pre>
+
+<ul>
+<li>break
+
+<ul>
+<li>現在のブロックやループ停止する</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-本日の課題" class="anchor" href="#%E6%9C%AC%E6%97%A5%E3%81%AE%E8%AA%B2%E9%A1%8C" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>本日の課題</h2>
+
+<ul>
+<li>task/0419をやってくること</li>
+<li>わからない所は調べる。調べてわからなければヒントを聞く。</li>
+<li>重要なのはエラー吐かれても諦めない心、適切なワードでググる技能、キーボードを叩き続ける体力</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-エラーの対象法" class="anchor" href="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%AF%BE%E8%B1%A1%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>エラーの対象法</h2>
+
+<ol>
+<li>どんなエラーなのか読む<br>
+</li>
+<li>何行目に出ているかをチェックする<br>
+</li>
+<li>打ち間違えはないか、入力し忘れはないかをチェックする<br>
+
+<ul>
+<li>特に”;)}などは忘れることが多い<br>
+</li>
+<li>上記についてはインデントを整えると発見しやすい<br>
+</li>
+</ul>
+</li>
+<li>最終的にはエラーをコピッてググる<br>
+</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="user-content-slackについて" class="anchor" href="#slack%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>slackについて</h2>
+
+<ul>
+<li><p>全員<a href="https://slack.com/downloads">for desktop</a>,for smart　phoneの両方をインストールすること  </p></li>
+<li><p>話題はチャンネルごとに分けよう  </p></li>
+<li>全体にメールを送るときは/#mailにて@channel　本文　と書くようにしよう</li>
+<li>他にも便利機能がたくさんあるので、調べて試してみよう!!</li>
+</ul>
+</article></body></html>
