@@ -2,7 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src = "main.js"></script>
+  <script type="text/javascript" src="https://rawgithub.com/chjj/marked/master/lib/marked.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 <style>
 * {
 	margin:0;
@@ -18,6 +20,7 @@ body {
 
 
 #left_frame {
+
 	background-color: #ccc;
 	height:100%;
 	left:0;
@@ -28,6 +31,9 @@ body {
 	top:0;
 	width:160px;
 
+}
+#left_frame h3, p, li, a{
+	 margin :0px;
 }
 #left_frame li {
 	color: blue;
@@ -52,20 +58,20 @@ body {
 <div id="left_frame">	
 	<h3>ゼミ資料</h3>
 	<p>2回目<p>
-	<li onClick="loadText('./algo-semi/document/0426_main.html')">資料</li>
-	<li onClick="loadText('./algo-semi/document/0426_add.html')">	追加1</li>
-	<li onClick="loadText('./algo-semi/document/0426_add_part2.html')">	追加2</li>
+	<li onClick="loadText('https://raw.githubusercontent.com/LeClezioLab/seminar/master/document/0426semi.md')">資料</li>
+	<li onClick="loadText('https://raw.githubusercontent.com/NNAKAYAMA/workspace/master/seminar/0426_additional_doc.md')">	追加1</li>
+	<li onClick="loadText('https://raw.githubusercontent.com/NNAKAYAMA/workspace/master/seminar/0426_additional_doc_part2.md')">	追加2</li>
 	<li onClick="loadText('./algo-semi/document/0426_task.html')">課題</li>
 	<p>3回目<p>
-		<li onClick="loadText('./algo-semi/document/0510.html')">資料</li>
-		<li onClick="loadText('./algo-semi/document/0510_task.html')">資料</li>
+		<li onClick="loadText('https://raw.githubusercontent.com/LeClezioLab/seminar/master/document/0510.md')">資料</li>
+		<li onClick="loadText('https://raw.githubusercontent.com/LeClezioLab/seminar/master/task/0510.md')">課題</li>
 	<br>
 	<h3>プレゼンテーション</h3>
 	<a href="./algo-semi/slide/0426.html" target="_blank"><li>2回目</li></a>
 	<a href="./algo-semi/slide/0510.html" target="_blank"><li>3回目</li></a>
 </div>
 <div id="right_frame">
-	<div id ="disp"></div>
+	<div id ="contents"></div>
 </div>
 </body>
 </html>

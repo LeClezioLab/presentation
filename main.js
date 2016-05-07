@@ -17,7 +17,9 @@ function loadText(url){
 
 function checkStatus(){
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
-    var node = document.getElementById("disp");
-    node.innerHTML = xmlHttp.responseText;
+    var markdown = xmlHttp.responseText;
+    markdown = markdown.replace(/(#{1,6})/g,"$1 ");
+    var content = document.getElementById("contents");
+    content.innerHTML = marked(markdown);
   }
 }
