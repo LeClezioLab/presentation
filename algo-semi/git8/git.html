@@ -1,0 +1,246 @@
+﻿<html lang="ja"><head><meta charset="utf-8"><title>git(1)
+</title></head>
+<body>
+<p />
+<font size="+2"><b>
+github.com上で新たなレポジトリを作る
+</b></font>
+<p />
+まずwww.github.com にWebブラウザでサインインします。<br />
+こんなサインインすると、こんな画面になるはずです。
+<p />
+<a href="git1.jpg"><img src="git1.jpg" width="400" border="1"><a>
+<p />
+この右上の「＋」のところを、ぽちっとすると以下の図のようになります。
+<p />
+
+<a href="git2.jpg"><img src="git2.jpg" width="400" border="1"></a>
+<p />
+「New Repositry」をクリックすると。
+<p />
+
+<a href="git3.jpg"><img src="git3.jpg" width="400" border="1"></a>
+<p />
+こんな感じになります。<br />
+ここで、新しいレポジトリ名を指定します。
+
+<p />
+<a href="git4.jpg"><img src="git4.jpg" width="400" border="1"></a>
+<p />
+この段階で、github.com上には<font color="red"><b>http://github.com/ユーザ名/レポジトリ名</b></font>に、
+新しいレポジトリが作られました。<br />
+この画面では、ユーザーleplusplus、レポジトリstack-が
+<b>
+https://github.com/leplusplus/stack-
+</b>
+にレポジトリが作られています。
+<p />
+この画面で表示されているところに注目してください。
+<p />
+<table border="1"><tr><td>
+<b><pre>
+
+echo "# stack-" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/leplusplus/stack-.git
+git push -u origin master
+
+</pre></b>
+</td></tr></table>
+<p /> 
+この文字列はコマンドの集合です。
+<br />
+自分のパソコン上でgitshell等を起動し（黒画面）、上のコマンド群を実行することで、<font color="green">自分のパソコン上のフォルダ</font>と、
+<font color="red">github.com上にたった今作ったリポジトリ</font>とを紐づけすることができます。
+<p />
+
+<p />
+<font size="+2"><b>
+自分のパソコン上のフォルダをレポジトリと関連付ける
+</b></font>
+<p /><p />
+<p />
+自分のパソコン上の作業フォルダをgithub.com上のレポジトリと「紐づけ」します。
+<p />
+自分のパソコン上でgitがうまく設定されていれば、デフォルトのgithubフォルダが設定されているはずです。
+<br />
+自分のパソコン上でgitshellを起動してみます。
+<p />
+<a href="git5.jpg"><img src="git5.jpg" width="400" border="1"></a>
+<p />
+この画面では、GitHubフォルダが<b>C:\Users\Le\Documents\GitHub</b>に設定されています。<br />
+とりあえずはGitHubフォルダ以下を作業ディレクトリとするのが安全です。
+<p />
+フォルダ stack- を作り、そこに移動します。
+<p />
+ここで先ほどのコマンド群を入力します。<br />
+カット＆ペーストではなく、手作業で入力するのがよいでしょう。
+<p />
+
+<table border="1" width="700"><tr><td>1</td><td><b>
+
+echo "# stack-" >> README.md
+</b></td><td>
+フォルダ内にREADME.mdというファイルを作る。<br />
+エディタ等で作っても構いません。作らなくても動きますが、誰かに怒られるかもしれません。
+</td></tr><tr><td>2</td><td><b>
+git init
+</b></td><td>このフォルダをgitで管理するための初期設定。<br />
+隠しフォルダ<b> .git </b>が作られ、各種設定ファイルが作られます。
+</td></tr><tr><td>3</td><td><b>
+git add README.md
+</b></td><td>
+gitで管理するファイルをaddします。<br />
+開発途中のプログラムソースなどをaddしていくことになります。
+</td></tr><tr><td>4</td><td><b>
+git commit -m "first commit"
+</b></td><td>git管理対象の変更点をcommitします。<br />
+現時点で管理の対象となっているのは、先にaddしたREADME.mdだけです。
+</td></tr><tr><td>5</td><td><b>
+git remote add origin https://github.com/leplusplus/stack-.git
+</b></td><td>
+自分のパソコンの現在のフォルダを、github.com上のフォルダと関連付けます。
+</td></tr><tr><td>7</td><td><b>
+git push -u origin master
+</b></td><td>
+git管理下にあるcommitをmasterへpushします。
+
+</td></tr>
+</table>
+<p />
+
+自分のパソコンの開発環境のフォルダに入り、そこを拠点とすればよいわけです。
+<br />
+gitで管理を始めるには、そのフォルダ内で<b> git init </b>します。
+<br />
+パソコンのgit環境が整っていれば、これだけでそのフォルダ（およびサブフォルダ）はgitで管理できます。
+<br />
+<b> git init </b>すると、そのフォルダ内に隠しフォルダ<b> .git </b>が作成されます。
+<p />
+試しにまったく別のフォルダに行って、git init してみましょう。
+<p />
+<a href="git6.jpg"><img src="git6.jpg" width="400" border="1"></a>
+<p />
+上の例では、まったく別の場所でフォルダ <b> test-git </b>を掘り、そこに<b> cd </b>しています。<br />
+<b> git init </b>すると、隠しフォルダ <b> .git </b>が作成され、そのフォルダがgitの管理対象となります。
+<br />
+既存のフォルダでもかまいません。<b> git init </b>することで、そのフォルダが管理対象となります。
+<p />
+<font size="+2"><b>
+隠しフォルダ.gitの内容
+</b></font>
+<p />
+gitは、隠しフォルダ<b>.git</b>内でそのフォルダ（とサブフォルダ）を管理しています。<br />
+<b>git init</b>して、最初に作られるファイルを見ておきます。<br />
+隠しフォルダ<b> .git </b>は<b> dir </b>などのコマンドでは表示されませんが構わず<b>cd </B>します。
+<p />
+<a href="git7.jpg"><img src="git7.jpg" width="400" border="1"></a>
+<p />
+.git にcdしたら、コマンドプロンプトが<b>[master]</b>から<b>[GIT_DIR!]</b>に変わったことに注意。
+<p />
+.git フォルダ内にはいろいろなファイルやサブフォルダが作られていますが、今は無視します。<br />
+重要なのが、<b> config </b>　ファイルです。<br />
+中身をのぞいてみると、[core]というセクション？があり、なんか書いてあります。
+<br />
+とりあえず、<b> cd .. </b>をして作業ディレクトリに戻り、教科書通りに<b> README.md </b>を作り、
+<b> git add README.md </b>します。
+<p />
+<a href="git8.jpg"><img src="git8.jpg" width="400" border="1"></a>
+<p />
+README.mdを作った途端に、コマンドプロンプトの<b>[master]</b>が<b>[master +1 ~0 -0 1]</b>に変化していることに注目。<br />
+さらに、<b> git add README.md </b>をした途端に、<b>[master +1 ~0 - ~]</b>に変化している。
+<br />
+しかし、.git　フォルダの内容は、<b>表面上は</b>何もかわっていないようだ。（おそらく、サブフォルダの内容が変化しているはずだ）
+<p />
+<font size="+2"><b>
+フォルダをgithub.com上のレポジトリと紐づける
+</b></font>
+<p />
+このままでは、当該ディレクトリがgitの管理下に置かれているだけで、ネット上のgitHUb.comとは連携が取れていません。<br />
+自分のパソコン内で、<b> git add testprogram.c </b> したり　<b> git commit -m gudaguda </b> とか、バージョン管理はできますが、それをgithub.comのレポジトリに<b> push </b>したりすることはできません。
+<br />
+自分のパソコン内のgit管理下のフォルダを、github.com上のレポジトリと紐づけるには、<p />
+git remote add origin https://github.com/ユーザー名/リポジトリ名.git
+<p />
+とします。
+<p />
+<a href="git9.jpg"><img src="git9.jpg" width="400" border="1"></a>
+<p />
+この画面では、<b> git remote add origin https://github.com/leplusplus/stack-.git </b>です。<br />
+こうすることで、隠しフォルダ <b>.git</b>内の<b> config </b> ファイルの内容に<b> [remote "origin"] </b>セクションが追加され、<br />
+<b> url = https://github.com/leplusplus/stack-.git <br />
+ fetch - +refs/heads/*:refs/remotes/origin/*
+</b>
+が追加されます。
+<p />
+これで、パソコン上の当該フォルダがgithub.comのリポジトリ名と紐づけられ、pushすることができるようになります。
+
+<p />
+<font size="+2"><b>
+いろいろやってみる
+</b></font>
+<p />
+
+１）ステージング
+<br />
+いろいろ修正したファイルを、commitの対象として登録する。のだと思う。
+<br />
+git add ファイル名<br />
+で、指定されたファイルがcommitの対象となるはず。
+<br />
+git add -u<br />
+は、変更されたファイルのみをステージングする。（ようだ）
+<p />
+
+２）コミット
+<p />
+ステージングしたらすぐに<b>commit</b>をしたほうがよいのか俺にはよくわからん。
+<br />
+ステージングされたファイルを対象に修正ポイントを作成する。<br />
+<b>git commit -m タグ</b>
+<br />
+タグは省略できない。
+<br />
+このタグは、そのうちでてくるブランチの操作に使われるので、結構重要。<br />
+何を変更したのかを簡潔に書く。
+<p />
+３）プッシュ
+<p />
+commitされた修正ポイントをgitHub.comに反映させる。（かな？）
+<p />
+<b> git push -u origin master</b></br>
+<p />
+<font size="+2"><b>
+いろいろと疑問点
+</b></font>
+<p />
+<b><pre>
+
+git add *.c
+git commit -m "hoge"
+git push -u origin master
+</pre></b>
+<br> 
+の動きがいまいちつかめないのだが、
+とりあえず、
+変更したファイルをcommit対象とするのがgit add（ステージング？）<br />、
+ステージング対象となったファイルをcommitして修正ポイントを作り、<br />
+git pushでその修正ポイントをgithub.comに反映させる。<br />
+ということだと思う。
+<p />
+とりあえず、単純なプログラム作成の場合、なんか修正してcommit/pushしたいのなら、
+<pre><b>
+git commit -a -m "hoge"
+git push -u origin master
+</b></pre>
+<p />
+でよいように思う。
+<p />
+<a href="git10.jpg"><img src="git10.jpg" width="400" border="1"></a>
+<p /><br />
+今はブランチとかは考えず、ただ慣れるほうがよいと思う。
+
+<br />
+</body></html>
